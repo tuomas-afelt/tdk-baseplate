@@ -1,0 +1,16 @@
+﻿<header class="template-header">
+
+	<div class="wrapper">
+		{{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
+		{{widget('companyname', 'header-companyname', {"business": "profile"})|raw}}
+	</div>
+	
+</header>
+
+<nav class="template-nav">
+
+	<div class="wrapper">
+		{{widget('extendednavigation', 'nav-extendednavigation', {})|raw}}
+	</div>
+	
+</nav>

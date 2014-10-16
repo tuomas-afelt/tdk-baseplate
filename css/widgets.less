@@ -1,0 +1,1157 @@
+/* ----------------------------------------
+
+   Colour Swatches
+   ========================================
+   "color1": == Background
+   "color2": == Contrast colour
+   "color3": == Button colour
+   "color4": == Title colour
+   "color5": == Paragraph colour
+   "color6": == Nav text colour
+   "color7": == Header BG colour
+
+   Font Swatches
+   ========================================
+   "font1":  == Heading 1
+   "font2":  == Heading 2
+   "font3":  == Heading 3
+   "font4":  == Heading 4
+   "font5":  == Paragraph
+   "font6":  == Navigation Text
+   "font7":  == Buttons
+   "font8":  == Feature Title
+   "font9":  == Feature Subtitle
+   "font10": == Logo
+
+---------------------------------------- */
+
+/* All widgets in the main area
+======================================== */
+
+main .widget {
+	margin: 0 0 25px 0;
+	padding: 0;
+}
+
+main .widget {
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&:only-child {
+		margin: 0;
+	}
+}
+
+/* Logo (Widget)
+======================================== */
+
+.widget.logo {
+	a {
+		.logo {
+			img {
+				&:hover {}
+			}
+		}
+	}
+}
+
+/* Company Name (Widget)
+======================================== */
+
+.widget.companyname {
+	a {}
+}
+
+/* Tablet viewport */
+
+@media @tablet {
+	.widget.companyname {
+		a {
+			font-size: bkscale(@font-swatch10-font-size, 1);
+			line-height: bkscale(@font-swatch10-line-height, 1);
+		}
+	}
+}
+
+/* Mobile viewport */
+
+@media @mobile {
+	.widget.companyname {
+		a {
+			font-size: bkscale(@font-swatch10-font-size, 1);
+			line-height: bkscale(@font-swatch10-line-height, 1);
+		}
+	}
+}
+
+/* Navigation (Widget)
+======================================== */
+
+.widget.extendednavigation {
+	.extendednavigation {
+		ul {
+			.clearfix;
+			li {
+				display: block;
+				float: left;
+				border-left: 1px solid darken(@color-swatch3,20%);
+				a {
+					padding: 10px 15px;
+					background-color: @font-swatch7-background-color;
+					color: @font-swatch7-color;
+					span.text {}
+					&:hover {
+						background-color: @font-swatch7-background-color-hover;
+					}
+				}
+				&:first-child {
+					border-left: 0;
+				}
+			}
+			li.folder {
+				margin-right: 0;
+				span.text {
+					padding: 10px 25px 10px 15px;
+					background-color: @font-swatch7-background-color;
+					color: @font-swatch7-color;
+					&:hover {
+						background-color: @font-swatch7-background-color-hover;
+					}
+				}
+				ul {
+					li {
+						display: block;
+						float: none;
+						border-top: 1px solid darken(@color-swatch3,20%);
+						border-left: 0;
+						a {
+							span.text {
+								padding: 0;
+								background: transparent;
+							}
+						}
+						&:first-child {
+							border-top: 0;
+						}
+					}
+				}
+				&:hover {
+					> span.text {
+						background-color: @font-swatch7-background-color-hover;
+					}
+				}
+				&:after {
+					top: 45%;
+					right: 11px;
+				}
+			}
+			li.selected {
+				a {
+					background-color: @font-swatch7-background-color-hover;
+					span.text {}
+				}
+			}
+		}
+		a.pull {}
+	}
+}
+
+/* Tablet viewport */
+
+@media @tablet {
+	.widget.extendednavigation {
+		.extendednavigation {
+			ul {
+				margin: 0;
+				padding: 0;
+				li {
+					float: none;
+					padding: 0;
+					border-top: 1px solid darken(@color-swatch3,20%);
+					border-bottom: 0;
+					border-left: 0;
+					a {
+						span.text {}
+					}
+					&:first-child {
+						border-top: 0;
+					}
+				}
+				li.folder {
+					span.text {}
+					ul {
+						margin: 0;
+						padding: 0;
+						li {
+							a {
+								span.text {}
+							}
+							&:first-child {
+								border-top: 1px solid darken(@color-swatch3,20%);
+							}
+						}
+					}
+				}
+				li.selected {
+					a {
+						span.text {}
+					}
+				}
+			}
+			a.pull {
+				top: -40px;
+				right: 0px;
+			}
+		}
+	}
+}
+
+/* Feature (Widget)
+======================================== */
+
+.widget.feature {
+	.feature-bgimg {
+		.content {
+			.spare.wrapper {
+				h2 {
+					span {}
+				}
+				h3 {
+					span {}
+				}
+				span.feature-btn {
+					button.btn {
+						span.btnText {}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Tablet viewport */
+
+@media @tablet {
+	.widget.feature {
+		.feature-bgimg {
+			.content {
+				.spare.wrapper {
+					h2 {
+						font-size: bkscale(@font-swatch8-font-size, 1);
+						line-height: bkscale(@font-swatch8-line-height, 1);
+						span {}
+					}
+					h3 {
+						font-size: bkscale(@font-swatch9-font-size, 1);
+						line-height: bkscale(@font-swatch9-line-height, 1);
+						span {}
+					}
+					span.feature-btn {
+						button.btn {
+							span.btnText {}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Mobile viewport */
+
+@media @mobile {
+	.widget.feature {
+		.feature-bgimg {
+			.content {
+				.spare.wrapper {
+					h2 {
+						font-size: bkscale(@font-swatch8-font-size, 1);
+						line-height: bkscale(@font-swatch8-line-height, 1);
+						span {}
+					}
+					h3 {
+						font-size: bkscale(@font-swatch9-font-size, 1);
+						line-height: bkscale(@font-swatch9-line-height, 1);
+						span {}
+					}
+					span.feature-btn {
+						button.btn {
+							span.btnText {}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Content (Widget)
+======================================== */
+
+.widget.content {
+	.bk-content-text {}
+}
+
+/* Contact Form (Widget)
+======================================== */
+
+.widget.contactform {
+	form {
+		fieldset {
+			.form-group {
+				label {}
+				input.email {}
+				textarea.message {}
+				button.btn {}
+			}
+		}
+	}
+}
+
+/* Twitter (Widget)
+======================================== */
+
+.widget.twitter {
+	ul {
+		li {
+			.twitter-profile-pic {
+				a {
+					img {}
+				}
+			}
+			.twitter-content {
+				a {
+					span.bk-full-name {}
+				}
+				p {}
+				time {}
+				span {
+					a {}
+				}
+			}
+			&:only-child,
+			&:last-child {}
+		}
+	}
+}
+
+/* Button (Widget)
+======================================== */
+
+.widget.button {
+	.b-wrap {
+		button.btn {
+			span.btnText {}
+		}
+	}
+}
+
+/* Company Address (Widget)
+======================================== */
+
+.widget.companyaddress {
+	p.address,
+	p.address1,
+	p.address2,
+	p.postal-code,
+	p.country {
+		&:empty {
+			display: none;
+		}
+	}
+}
+
+/* Social Icons (Widget)
+======================================== */
+
+/* Social Icons Area */
+.widget.socialicons,
+.widget.profile .bk-profile-socialicons  {}
+
+/* Social Icons */
+.widget.socialicons span.bk-socialicons-linkedin a,
+.widget.socialicons span.bk-socialicons-twitter a,
+.widget.socialicons span.bk-socialicons-facebook a,
+.widget.socialicons span.bk-socialicons-rss a,
+.widget.socialicons span.bk-socialicons-googleplus a,
+.widget.socialicons span.bk-socialicons-youtube a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-rss a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
+	&:hover {}
+}
+
+/* Youtube (Widget)
+======================================== */
+
+.widget.youtube {
+	.video-wrapper {
+		iframe {}
+	}
+}
+
+/* Line (Widget)
+======================================== */
+
+.widget.line {
+	hr.line {}
+}
+
+/* Map (Widget)
+======================================== */
+
+.widget.map {
+	map {}
+}
+
+/* Tablet viewport */
+
+@media @tablet {
+	.widget.map {
+		map {}
+	}
+}
+
+/* Mobile viewport */
+
+@media @mobile {
+	.widget.map {
+		map {}
+	}
+}
+
+/* Profile (Widget)
+======================================== */
+
+.widget.profile {
+	span.bk-profile-strapline {}
+	span.bk-profile-companydescription {}
+	.bk-profile-address {
+		p.address,
+		p.address1,
+		p.address2,
+		p.country,
+		p.postal-code {
+			&:empty {
+				display: none;
+			}
+		}
+	}
+	.bk-profile-email {
+		a {}
+	}
+	span.bk-profile-phone {}
+	span.bk-profile-business {}
+	span.bk-profile-copyright {}
+	ul.twitter {
+		li {
+			.clearfix;
+			.twitter-profile-pic {
+				display: block;
+				float: left;
+				margin-right: 20px;
+				a {
+					img {}
+				}
+			}
+			.twitter-content {
+				a {
+					span.bk-full-name {
+						display: block;
+					}
+					&:hover {}
+				}
+				p {}
+				time {
+					display: inline-block;
+				}
+				span {
+					display: inline-block;
+					a {}
+				}
+			}
+			&:only-child,
+			&:last-child {}
+		}
+	}
+	form {
+		fieldset {
+			.form-group {
+				label {}
+				input.email {}
+				button.btn {}
+			}
+		}
+	}
+}
+
+/* Image (Widget)
+======================================== */
+
+.widget.image {
+	a {
+		span.image-img {
+			img {
+				&:hover {}
+			}
+		}
+		span.image-title {}
+		span.image-description {}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+/* PayPal Button (Widget)
+======================================== */
+
+.widget.paypalbuynow {
+	.ctc-wrap {
+		form {
+			input.widget.button.paypal {}
+		}
+	}
+}
+
+/* Tweet Button (Widget)
+======================================== */
+
+.widget.tweet {
+	.tweet {
+		a.tweet-link {}
+	}
+}
+
+/* Dropbox Button (Widget)
+======================================== */
+
+.widget.dropbox {
+	.b-wrap {
+		button.btn {
+			span.btnText {}
+		}
+		span.file-name {}
+	}
+}
+
+/* Click-to-Call Button (Widget)
+======================================== */
+
+.widget.clicktocall {
+	.ctc-wrap {
+		a {}
+	}
+}
+
+/* Gallery (Widget)
+======================================== */
+
+.widget.gallery {
+	ul.gallery-widget {
+		li.square {
+			span.inner {
+				a {
+					img {}
+					span.image-data {
+						span.title {}
+						span.description {}
+						&:hover {}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Responsive Slideshow (Widget)
+======================================== */
+
+.widget.responsiveslideshow {
+	.slideshow-widget-wrapper {
+		.slideshow-widget {
+			.btns-move {
+				span.btn-prev.slide-ctrl {}
+				span.btn-next.slide-ctrl {}
+				span.btn-prev.slide-ctrl,
+				span.btn-next.slide-ctrl {
+					&:hover {}
+				}
+			}
+			span.btn-play,
+			span.btn-play.pause {
+				&:after {}
+				&:hover {}
+				@media @tablet {}
+			}
+			ul.slideshow-image-list {
+				li.slideshow-image-item {
+					span.inner {
+						.image-wrapper {
+							img.slideshow-image {}
+						}
+						.content-wrapper {
+							span.title {
+								&:after {
+									content: ":";
+								}
+							}
+							span.description {}
+						}
+					}
+				}
+				li.slideshow-image-item.current {}
+			}
+		}
+		.slideshow-widget-controls {
+			span.dot.slide-ctrl {
+				&:hover {}
+			}
+			span.dot.slide-ctrl.selected {}
+			span.dot.slide-ctrl,
+			span.dot.slide-ctrl.selected {}
+		}
+	}
+}
+
+/* Sign Up Form (Widget)
+======================================== */
+
+.widget.signupform {
+	form {
+		fieldset {
+			.form-group {
+				label {}
+				input.email {}
+				button.btn {}
+			}
+		}
+	}
+}
+
+/* Blog Post List (Widget)
+======================================== */
+
+.widget.blogpostlist {
+	section.blog-post-list {
+		article.blog-post-item {
+			h2.blog-post-title {
+				a {
+					&:hover {}
+				}
+			}
+			p.blog-post-summary {}
+			p.blog-post-more-link {
+				a {}
+			}
+			a.blog-post-date {
+				time.blog-post-published-date {
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		article.blog-post-item.has-image {
+			.blog-post-feature-image-wrap {
+				background-size: contain;
+				img.blog-post-feature-image {}
+			}
+		}
+	}
+	footer.blog-list-footer {
+		a.blog-post-pagination-page.paginate-older {}
+	}
+}
+
+/* Blog Post (Widget)
+======================================== */
+
+.widget.blogpost {
+	article.blog-post-item {
+		.blog-post-title-content-wrap {
+			h1.blog-post-title {}
+			section.blog-post-content {
+				p {}
+			}
+		}
+		footer.blog-post-metadata {
+			time.blog-post-publish-date {
+				display: inline-block;
+			}
+			.blog-post-category {
+				p.blog-post-category-label {
+					&:after {
+						content: ":";
+					}
+				}
+				p.blog-post-category {
+					a {}
+				}
+			}
+			.blog-post-tags {
+				p.blog-post-tags-label {
+					&:after {
+						content: ":";
+					}
+				}
+				ol.blog-post-tags-list {
+					li.blog-post-tag {
+						a {}
+						&:after {
+							content: "/";
+						}
+						&:last-child:after {
+							content: " ";
+						}
+					}
+				}
+			}
+		}
+		aside.blog-post-sharing {
+			button.btn.facebook,
+			button.btn.twitter,
+			button.btn.googleplus {
+				span {}
+			}
+		}
+	}
+	article.blog-post-item.has-image {
+		.blog-post-feature-image-wrap {
+			background-size: contain;
+			img.blog-post-feature-image {}
+		}
+	}
+}
+
+/* Blog Search (Widget)
+======================================== */
+
+.widget.blogsearch {
+	form.blog-search-form {
+		.form-group {
+			label {}
+			input.blog-search-input {}
+			button.blog-search-submit-button {}
+		}
+	}
+}
+
+/* Menu Sections (Widget)
+======================================== */
+
+.widget.menusections {
+	ul.menu-section-list {
+		li {
+			a {}
+			&:first-child {}
+		}
+	}
+	a.menu-pull {}
+}
+
+/* Menu (Widget)
+======================================== */
+
+.widget.menu {
+	.menu-header {
+		.menu-name-background {
+			h1.menu-name {}
+		}
+		p.menu-description {}
+	}
+	ol.menu-items {
+		li.menu-item {
+			.inner-item {
+				h3.menu-item-name {
+				}
+				.menu-item-image-wrap {
+					background-size: contain;
+					img.menu-item-image {}
+				}
+				.menu-item-price {
+					p.standard-price {}
+				}
+				p.menu-item-description {}
+				h4.menu-item-nutritional-title {}
+				.menu-item-nutritional-prop {}
+				.menu-section-item-dietary-props {
+					span {
+						&:before {
+							content: "/";
+							padding-right: 5px;
+						}
+						&:first-child:before {
+							content: " ";
+							padding-right: 0;
+						}
+					}
+					span.dietary-icon,
+					span.vegetarian-icon,
+					span.glutenfree-icon,
+					span.not-spicy-icon {
+						font-style: italic;
+					}
+					span.dietary-icon {}
+					span.vegetarian-icon {}
+					span.glutenfree-icon {}
+					span.not-spicy-icon {}
+				}
+				&:last-child {}
+			}
+		}
+	}
+	ol.menu-subsection {
+		padding: 0;
+		li.menu-subsection-wrapper {
+			.menu-subsection-header {
+				h2.menu-subsection-name {}
+				p.menu-subsection-description {}
+			}
+			ol.menu-items {
+				li.menu-item {
+					.inner-item {
+						h3.menu-item-name {}
+						.menu-item-price {
+							p.standard-price {}
+						}
+						p.menu-item-description {}
+						h4.menu-item-nutritional-title {}
+						.menu-item-nutritional-prop {}
+						.menu-section-item-dietary-props {
+							span.dietary-icon {}
+							span.vegetarian-icon {}
+							span.nutfree-icon {}
+							span.dairyfree-icon {}
+							span.not-spicy-icon {}
+						}
+					}
+				}
+			}
+		}
+	}
+	.menu-info {
+		p.menu-note {}
+	}
+}
+
+/* Tablet viewport */
+
+@media @tablet {
+	.widget.menu .wrapper {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+/* Ecommerce product list (Widget)
+======================================== */
+
+.widget.ecomproductslist {
+	section.ecom-productslist-products {
+		.productlist-filter {
+			form.productlist-display-form {
+				.form-group {
+					label {}
+					select.js-display-control {}
+				}
+				.form-group.productlist-search {
+					label {}
+					input.js-display-control {}
+				}
+			}
+			p.productlist-item-count {}
+		}
+		article.ecom-productslist-product {
+			a {
+				.ecom-productslist-image-wrap {
+					background-size: contain;
+					img.ecom-productslist-image {}
+					&:hover {}
+				}
+				.ecom-productlist-info {
+					h2.ecom-productslist-title {}
+					span.ecom-productlist-price {}
+				}
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		.productlist-pagination {
+			ol.productlist-pagination-pages {
+				li.productlist-pagination-page {
+					a {
+						display: inline-block;
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+				li.productlist-pagination-page.current {
+					span {
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Ecommerce product (Widget)
+======================================== */
+
+.widget.ecomproduct {
+	article.ecom-product {
+		.ecom-product-images-container,
+		.ecom-product-info {}
+		.ecom-product-images-container {
+			.ecom-product-preview-image-wrap {
+				background-size: contain;
+				img.ecom-product-preview-image {}
+			}
+			ul.ecom-product-image-list {
+				li.ecom-product-image-wrap {
+					background-size: contain;
+					img.ecom-product-image {}
+					&:hover {}
+				}
+			}
+		}
+		.ecom-product-info {
+			h2.ecom-product-title {}
+			span {
+				p.ecom-product-price {}
+			}
+			.ecom-product-variation {
+				span.ecom-product-vartitle {}
+				select {}
+			}
+			.ecom-product-add-to-cart-btn-wrapper {
+				display: inline-block;
+				button.btn.ecom-product-add-to-cart-btn {
+					margin-right: 3px;
+					padding-left: 20px;
+					span.text {}
+				}
+			}
+			.ecom-product-go-to-checkout-btn-wrapper {
+				display: inline-block;
+				a.btn.ecom-product-go-to-checkout-btn {
+					margin: 20px 0;
+				}
+			}
+			.ecom-product-cattag {
+				margin: 0;
+				span.ecom-product-category {
+					a.store-category-link {}
+				}
+				span.ecom-product-tag {
+					a.ecom-product-tag-link {
+						&:after {
+							content: ",";
+						}
+						&:last-child:after {
+							content: " ";
+						}
+					}
+				}
+			}
+		}
+		.ecom-product-long-description {}
+	}
+}
+
+/* Ecommerce basket (Widget)
+======================================== */
+
+.widget.ecombasket {
+	.ecombasket-pull {
+		width: auto;
+		p {
+			span.basket-count {}
+			&:before {}
+		}
+	}
+	.ecombasket-list-container {
+		ul {
+			li {
+				a.ecombasket-item-title {
+					.ecombasket-item-image {
+						img {}
+					}
+				}
+				.ecombasket-item-info {
+					a.ecombasket-item-title {}
+					.ecombasket-item-count-wrapper {
+						p.ecombasket-item-count-label {}
+					}
+					p.ecombasket-item-price {}
+					.ecombasket-remove-button.js-remove {}
+				}
+			}
+		}
+		.ecombasket-total-wrap {
+			p {
+				span.ecombasket-total {}
+			}
+		}
+		.ecombasket-summary-wrap {
+			a.btn.ecombasket-summary-link {}
+		}
+	}
+}
+
+/* Ecommerce basket summary (Widget)
+======================================== */
+
+.widget.ecombasketsummary {
+	h2.basket-summary-title {}
+	table.basket-summary-items-table {
+		width: 100%;
+		max-width: 100%;
+		border-spacing: 0;
+		tbody {
+			tr {
+				th,
+				td {
+					vertical-align: top;
+					text-align: left;
+				}
+				th.basket-summary-items-column,
+				th.basket-summary-details-column,
+				th.basket-summary-amount-column {}
+				td {}
+				&:last-child {
+					td {}
+				}
+			}
+			tr.basket-summary-items {
+				td {
+					.image-wrap {
+						background-size: contain;
+						img.image {}
+					}
+					.basket-summary-product-info {
+						a.basket-summary-productname {}
+						span.basket-summary-pricepu {}
+					}
+					.basket-summary-quantity {
+						label.basket-summary-quantity-text {
+							display: inline-block;
+						}
+						.basket-summary-quantitybtn {
+							button.btn.js-remove {}
+							span.quantity-number {}
+							button.btn.js-add {}
+						}
+					}
+				}
+				td.basket-summary-amount {}
+				td.basket-summary-subtotal {}
+			}
+		}
+	}
+	form {
+		button.btn.basket-summary-submit {}
+	}
+}
+
+/* Tablet viewport */
+
+@media @tablet {
+	.widget.ecombasketsummary {
+		overflow-x: scroll;
+	}
+}
+
+/* Ecommerce categories list (Widget)
+======================================== */
+
+.widget.ecomcategorieslist {
+	aside.product-category {
+		ul.product-category-items {
+			padding: 0;
+			li {
+				display: inline-block;
+				a {}
+			}
+		}
+	}
+}
+
+/* Ecommerce featured products (Widget)
+======================================== */
+
+.widget.ecomfeaturedproducts {
+	header.ecom-featuredproducts-header {
+		h2 {}
+	}
+	section.ecom-featuredproducts-wrap {
+		article.ecom-featuredproducts-product {
+			a {
+				.ecom-featuredproducts-image-wrap {
+					background-size: contain;
+					img.ecom-featuredproducts-image {}
+					&:hover {}
+				}
+				.ecom-featuredproducts-info {
+					h2.ecom-featuredproducts-title {}
+					span.ecom-featuredproducts-price {}
+				}
+			}
+		}
+	}
+}
+
+/* SoundCloud (Widget)
+======================================== */
+
+.widget.soundcloud {
+	max-width: 100%;
+	.audio-wrapper {
+		iframe {}
+	}
+}
+
+/* Facebook Comments (Widget)
+======================================== */
+
+.widget.facebookcomments {
+	max-width: 100%;
+	overflow-x: scroll;
+	.fb-comments {
+		span {
+			iframe {}
+		}
+	}
+}
+
+/* Yelp Review (Widget)
+======================================== */
+
+.widget.yelpreview {
+	h2.yelp-title {}
+	ul.yelpreview {
+		li {
+			dl.review-body {
+				dt.rating {
+					img {}
+				}
+				dd.created {}
+				dd.review {}
+				dd.reviewer {}
+				dd.review-link {
+					a {}
+				}
+			}
+		}
+	}
+}

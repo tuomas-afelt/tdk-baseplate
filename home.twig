@@ -1,0 +1,17 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<section class="template-feature">
+	{{widget('feature', 'template-feature', {"header": "profile", "strapline":"profile", "buttonText":"Contact us","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+</section>
+
+<main class="template-main">
+	
+	<div class="main-content wrapper">
+		{{zone('main')|raw}}
+	</div>
+	
+</main>
+
+{% endblock %}

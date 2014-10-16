@@ -1,0 +1,400 @@
+/* ----------------------------------------
+
+   Colour Swatches
+   ========================================
+   "color1": == Background
+   "color2": == Contrast colour
+   "color3": == Button colour
+   "color4": == Title colour
+   "color5": == Paragraph colour
+   "color6": == Nav text colour
+   "color7": == Header BG colour
+
+   Font Swatches
+   ========================================
+   "font1":  == Heading 1
+   "font2":  == Heading 2
+   "font3":  == Heading 3
+   "font4":  == Heading 4
+   "font5":  == Paragraph
+   "font6":  == Navigation Text
+   "font7":  == Buttons
+   "font8":  == Feature Title
+   "font9":  == Feature Subtitle
+   "font10": == Logo
+
+---------------------------------------- */
+
+/* Global styles
+======================================== */
+
+html, body {
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Typography
+======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+	word-wrap: break-word;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {}
+
+h1 {
+	@media @tablet {
+		font-size: bkscale(@font-swatch1-font-size, 1);
+		line-height: bkscale(@font-swatch1-line-height, 1);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch1-font-size, 1);
+		line-height: bkscale(@font-swatch1-line-height, 1);
+	}
+}
+
+h2 {
+	@media @tablet {
+		font-size: bkscale(@font-swatch2-font-size, 1);
+		line-height: bkscale(@font-swatch2-line-height, 1);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch2-font-size, 1);
+		line-height: bkscale(@font-swatch2-line-height, 1);
+	}
+}
+
+h3 {
+	@media @tablet {
+		font-size: bkscale(@font-swatch3-font-size, 1);
+		line-height: bkscale(@font-swatch3-line-height, 1);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch3-font-size, 1);
+		line-height: bkscale(@font-swatch3-line-height, 1);
+	}
+}
+
+h4 {
+	@media @tablet {
+		font-size: bkscale(@font-swatch4-font-size, 1);
+		line-height: bkscale(@font-swatch4-line-height, 1);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch4-font-size, 1);
+		line-height: bkscale(@font-swatch4-line-height, 1);
+	}
+}
+
+h5 {
+	font-family: @font-swatch4-font-family;
+    font-size: bkscale(@font-swatch4-font-size, 1);
+    font-weight: @font-swatch4-font-weight;
+    line-height: @font-swatch4-line-height;
+    color: @font-swatch4-color;
+    letter-spacing: @font-swatch4-letter-spacing;
+	@media @tablet {
+		font-size: bkscale(@font-swatch4-font-size, 1);
+		line-height: bkscale(@font-swatch4-line-height, 1);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch4-font-size, 1);
+		line-height: bkscale(@font-swatch4-line-height, 1);
+	}
+}
+
+h6 {
+	font-family: @font-swatch4-font-family;
+    font-size: bkscale(@font-swatch4-font-size, 1);
+    font-weight: @font-swatch4-font-weight;
+    line-height: @font-swatch4-line-height;
+    color: @font-swatch4-color;
+    letter-spacing: @font-swatch4-letter-spacing;
+	@media @tablet {
+		font-size: bkscale(@font-swatch4-font-size, 1);
+		line-height: bkscale(@font-swatch4-line-height, 1);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch4-font-size, 1);
+		line-height: bkscale(@font-swatch4-line-height, 1);
+	}
+}
+
+p {}
+
+p, ul, ol, li, .p-font, time.blog-post-publish-date {
+	@media @tablet {
+		font-size: bkscale(@font-swatch5-font-size, 1);
+		line-height: bkscale(@font-swatch5-line-height, 1);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch5-font-size, 1);
+		line-height: bkscale(@font-swatch5-line-height, 1);
+	}
+}
+
+span {}
+i, em {}
+b, strong {}
+
+small {
+	font-family: @font-swatch5-font-family;
+    font-size: bkscale(@font-swatch5-font-size, 0.75);
+    font-weight: @font-swatch5-font-weight;
+    line-height: @font-swatch5-line-height;
+    color: @font-swatch5-color;
+    letter-spacing: @font-swatch5-letter-spacing;
+}
+
+big {
+	font-family: @font-swatch5-font-family;
+    font-size: bkscale(@font-swatch5-font-size, 1.25);
+    font-weight: @font-swatch5-font-weight;
+    line-height: @font-swatch5-line-height;
+    color: @font-swatch5-color;
+    letter-spacing: @font-swatch5-letter-spacing;
+}
+
+blockquote {
+	margin: 0 0 20px 0;
+	padding: 20px 20px 20px 45px;
+	background: darken(@color-swatch1,10%);
+	&:before {
+		left: 20px;
+		color: darken(@color-swatch5,5%);
+	}
+}
+
+pre,
+code {
+	display: block;
+	margin: 0 0 20px 0;
+	padding: 20px;
+	background: darken(@color-swatch1,10%);
+	overflow-x: scroll;
+}
+
+hr {}
+
+/* Links
+======================================== */
+
+a {
+	word-wrap: break-word;
+}
+
+a, a:visited {}
+a:hover, a:focus {}
+a:active {}
+
+/* Selection
+======================================== */
+
+::-moz-selection {
+	background: @color-swatch4;
+	color: @color-swatch1;
+}
+::selection {
+	background: @color-swatch4;
+	color: @color-swatch1;
+}
+
+/* Images
+======================================== */
+
+img {}
+img:hover, img:focus {}
+
+/* Lists
+======================================== */
+
+dl, ul, ol {}
+
+dl {}
+ul {}
+ol {}
+
+dt {}
+dd {}
+li {}
+
+/* Tables
+======================================== */
+
+table {}
+tbody {}
+thead {}
+caption {}
+
+th {}
+tr {}
+td {}
+
+/* Forms
+======================================== */
+
+form,
+.widget.contactform form,
+.widget.profile form,
+.widget.signupform form,
+.widget.blogsearch form,
+.widget.ecomproductslist form {}
+
+/* Fieldsets */
+fieldset,
+.widget.contactform fieldset,
+.widget.profile fieldset,
+.widget.signupform fieldset {}
+
+/* Form groups */
+.widget.contactform .form-group,
+.widget.profile .form-group,
+.widget.signupform .form-group,
+.widget.blogsearch .form-group,
+.widget.ecomproductslist .form-group {
+	&:only-child,
+	&:last-child {}
+}
+
+/* Labels */
+label,
+.widget.contactform label,
+.widget.profile label,
+.widget.signupform label,
+.widget.blogsearch label,
+.widget.ecomproductslist label,
+.widget.ecomproduct .ecom-product-info .ecom-product-vartitle {
+	font-family: @font-swatch5-font-family;
+	font-size: @font-swatch5-font-size;
+}
+
+/* Radio and checkboxes */
+input[type="checkbox"],
+input[type="radio"] {}
+
+/* Input Fields */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select,
+.widget.contactform input.email,
+.widget.contactform textarea.message,
+.widget.profile input.email,
+.widget.signupform input.email,
+.widget.blogsearch input.blog-search-input,
+.widget.ecomproductslist .productlist-filter select,
+.widget.ecomproductslist .productlist-filter input,
+.widget.ecomproduct .ecom-product-info select {
+	outline: 0;
+	font-family: @font-swatch5-font-family;
+	font-size: @font-swatch5-font-size;
+	font-weight: @font-swatch5-font-weight;
+	line-height: @font-swatch5-line-height;
+	color: @font-swatch5-color;
+	letter-spacing: @font-swatch5-letter-spacing;
+	&:hover,
+	&:focus {}
+}
+
+/* Input field (Profile widget) */
+.widget.profile input.email {}
+
+/* Input field (Sign up form widget) */
+.widget.signupform input.email {}
+
+/* Selects */
+.widget.ecomproductslist .productlist-filter select,
+.widget.ecomproduct .ecom-product-info select {}
+
+/* Textarea (Contact form widget) */
+.widget.contactform textarea.message {}
+
+/* Placeholders
+======================================== */
+
+input::-webkit-input-placeholder {}
+input:-moz-placeholder {}
+input::-moz-placeholder {}
+input:-ms-input-placeholder {}
+
+/* Buttons
+======================================== */
+
+.widget.feature .feature-bgimg .content button.btn,
+.widget.contactform button.btn,
+.widget.button button.btn,
+.widget.profile button.btn,
+.widget.paypalbuynow .widget.button.paypal,
+.widget.tweet a.tweet-link,
+.widget.dropbox button.btn,
+.widget.clicktocall a,
+.widget.signupform button.btn,
+.widget.blogpostlist .blog-post-more-link a,
+.widget.blogpostlist .blog-list-footer a,
+.widget.blogpost button.btn.facebook,
+.widget.blogpost button.btn.twitter,
+.widget.blogpost button.btn.googleplus,
+.widget.blogsearch button.blog-search-submit-button,
+.widget.menusections ul li a,
+.widget.ecomproductslist .productlist-filter button.btn,
+.widget.ecomproduct .ecom-product-info button.btn.ecom-product-add-to-cart-btn,
+.widget.ecomproduct .ecom-product-info a.btn.ecom-product-go-to-checkout-btn,
+.widget.ecombasket .ecombasket-pull,
+.widget.ecombasketsummary button.btn.basket-summary-submit,
+.widget.ecomcategorieslist ul li a {
+	display: inline-block;
+	outline: 0;
+	border: 0;
+	vertical-align: top;
+	padding: 10px 20px;
+	background-color: @font-swatch7-background-color;
+	font-family: @font-swatch7-font-family;
+	font-size: @font-swatch7-font-size;
+	font-weight: @font-swatch7-font-weight;
+	line-height: @font-swatch7-line-height;
+	color: @font-swatch7-color;
+	letter-spacing: @font-swatch7-letter-spacing;
+	&:hover {
+		background-color: @font-swatch7-background-color-hover;
+		text-decoration: none;
+	}
+}
+
+/* Button (Dropbox widget) */
+.widget.dropbox button.btn {
+	vertical-align: middle;
+}
+
+/* Buttons (Disabled) */
+button:disabled,
+button.btn:disabled:hover,
+.widget.ecomcheckout .checkout-order-button:disabled {
+	cursor: not-allowed;
+}
+
+/* Buttons (Image) */
+.widget.paypalbuynow .widget.button.paypal,
+.widget.tweet a.tweet-link,
+.widget.dropbox button.btn,
+.widget.clicktocall a,
+.widget.ecomproduct .ecom-product-info button.btn.ecom-product-add-to-cart-btn {
+	padding-left: 40px;
+}
+
+/* Ecommerce buttons (Category list) */
+.widget.ecomcategorieslist ul,
+.widget.ecomcategorieslist li {
+	list-style-type: none;
+}
+
+/* Ecommerce buttons (-/+) */
+.widget.ecombasketsummary button.btn.js-remove,
+.widget.ecombasketsummary button.btn.js-add {
+	&:hover {}
+}
+
+/* Ecommerce button (-) */
+.widget.ecombasketsummary button.btn.js-remove {}
+
+/* Ecommerce button (+) */
+.widget.ecombasketsummary button.btn.js-add {}
