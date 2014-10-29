@@ -36,10 +36,13 @@ html, body {
 ======================================== */
 
 h1, h2, h3, h4, h5, h6 {
+	padding-bottom: 5px;
 	word-wrap: break-word;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: @font-swatch4-color;
+}
 
 h1 {
 	@media @tablet {
@@ -119,7 +122,9 @@ h6 {
 	}
 }
 
-p {}
+p {
+	padding-bottom: 20px;
+}
 
 p, ul, ol, li, .p-font, time.blog-post-publish-date {
 	@media @tablet {
@@ -133,8 +138,14 @@ p, ul, ol, li, .p-font, time.blog-post-publish-date {
 }
 
 span {}
-i, em {}
-b, strong {}
+
+i, em {
+	font-style: italic;
+}
+
+b, strong {
+	font-weight: 700;
+}
 
 small {
 	font-family: @font-swatch5-font-family;
@@ -208,7 +219,9 @@ img:hover, img:focus {}
 /* Lists
 ======================================== */
 
-dl, ul, ol {}
+dl, ul, ol {
+	padding-bottom: 20px;
+}
 
 dl {}
 ul {}
@@ -221,7 +234,10 @@ li {}
 /* Tables
 ======================================== */
 
-table {}
+table {
+	padding-bottom: 20px;
+}
+
 tbody {}
 thead {}
 caption {}
@@ -252,8 +268,11 @@ fieldset,
 .widget.signupform .form-group,
 .widget.blogsearch .form-group,
 .widget.ecomproductslist .form-group {
+	padding-bottom: 10px;
 	&:only-child,
-	&:last-child {}
+	&:last-child {
+		padding-bottom: 0;
+	}
 }
 
 /* Labels */
@@ -286,7 +305,14 @@ select,
 .widget.ecomproductslist .productlist-filter select,
 .widget.ecomproductslist .productlist-filter input,
 .widget.ecomproduct .ecom-product-info select {
+	vertical-align: middle;
+	text-indent: 0;
+	height: auto;
+	min-width: auto;
 	outline: 0;
+	border: 1px solid darken(@color-swatch1,10%);
+	padding: 10px 15px;
+	background: transparent;
 	font-family: @font-swatch5-font-family;
 	font-size: @font-swatch5-font-size;
 	font-weight: @font-swatch5-font-weight;
@@ -294,21 +320,15 @@ select,
 	color: @font-swatch5-color;
 	letter-spacing: @font-swatch5-letter-spacing;
 	&:hover,
-	&:focus {}
+	&:focus {
+		border: 1px solid darken(@color-swatch1,20%);
+	}
 }
 
-/* Input field (Profile widget) */
-.widget.profile input.email {}
-
-/* Input field (Sign up form widget) */
-.widget.signupform input.email {}
-
-/* Selects */
-.widget.ecomproductslist .productlist-filter select,
-.widget.ecomproduct .ecom-product-info select {}
-
 /* Textarea (Contact form widget) */
-.widget.contactform textarea.message {}
+.widget.contactform textarea.message {
+	min-height: 100px;
+}
 
 /* Placeholders
 ======================================== */
@@ -343,11 +363,11 @@ input:-ms-input-placeholder {}
 .widget.ecombasket .ecombasket-pull,
 .widget.ecombasketsummary button.btn.basket-summary-submit,
 .widget.ecomcategorieslist ul li a {
+	vertical-align: middle;
 	display: inline-block;
 	outline: 0;
 	border: 0;
-	vertical-align: top;
-	padding: 10px 20px;
+	padding: 8px 20px;
 	background-color: @font-swatch7-background-color;
 	font-family: @font-swatch7-font-family;
 	font-size: @font-swatch7-font-size;
@@ -359,11 +379,6 @@ input:-ms-input-placeholder {}
 		background-color: @font-swatch7-background-color-hover;
 		text-decoration: none;
 	}
-}
-
-/* Button (Dropbox widget) */
-.widget.dropbox button.btn {
-	vertical-align: middle;
 }
 
 /* Buttons (Disabled) */
@@ -391,7 +406,10 @@ button.btn:disabled:hover,
 /* Ecommerce buttons (-/+) */
 .widget.ecombasketsummary button.btn.js-remove,
 .widget.ecombasketsummary button.btn.js-add {
-	&:hover {}
+	background-color: @font-swatch7-background-color;
+	&:hover {
+		background-color: @font-swatch7-background-color-hover;
+	}
 }
 
 /* Ecommerce button (-) */
