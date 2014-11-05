@@ -760,84 +760,87 @@ main .widget {
 ======================================== */
 
 .widget.menu {
-	.menu-header {
-		.menu-name-background {
-			h1.menu-name {}
-		}
-		p.menu-description {}
-	}
-	ol.menu-items {
-		li.menu-item {
-			.inner-item {
-				h3.menu-item-name {
-				}
-				.menu-item-image-wrap {
-					background-size: contain;
-					img.menu-item-image {}
-				}
-				.menu-item-price {
-					p.standard-price {}
-				}
-				p.menu-item-description {}
-				h4.menu-item-nutritional-title {}
-				.menu-item-nutritional-prop {}
-				.menu-section-item-dietary-props {
-					span {
-						&:before {
-							content: "/";
-							padding-right: 5px;
-						}
-						&:first-child:before {
-							content: " ";
-							padding-right: 0;
-						}
-					}
-					span.dietary-icon,
-					span.vegetarian-icon,
-					span.glutenfree-icon,
-					span.not-spicy-icon {
-						font-style: italic;
-					}
-					span.dietary-icon {}
-					span.vegetarian-icon {}
-					span.glutenfree-icon {}
-					span.not-spicy-icon {}
-				}
-				&:last-child {}
+	.main {
+		width: auto;
+		.menu-header {
+			.menu-name-background {
+				h1.menu-name {}
 			}
+			p.menu-description {}
 		}
-	}
-	ol.menu-subsection {
-		padding: 0;
-		li.menu-subsection-wrapper {
-			.menu-subsection-header {
-				h2.menu-subsection-name {}
-				p.menu-subsection-description {}
-			}
-			ol.menu-items {
-				li.menu-item {
-					.inner-item {
-						h3.menu-item-name {}
-						.menu-item-price {
-							p.standard-price {}
-						}
-						p.menu-item-description {}
-						h4.menu-item-nutritional-title {}
-						.menu-item-nutritional-prop {}
-						.menu-section-item-dietary-props {
-							span.dietary-icon {}
-							span.vegetarian-icon {}
-							span.nutfree-icon {}
-							span.dairyfree-icon {}
-							span.not-spicy-icon {}
-						}
+		ol.menu-items {
+			li.menu-item {
+				.inner-item {
+					h3.menu-item-name {
 					}
+					.menu-item-image-wrap {
+						background-size: contain;
+						img.menu-item-image {}
+					}
+					.menu-item-price {
+						p.standard-price {}
+					}
+					p.menu-item-description {}
+					h4.menu-item-nutritional-title {}
+					.menu-item-nutritional-prop {}
+					.menu-section-item-dietary-props {
+						span {
+							&:before {
+								content: "/";
+								padding-right: 5px;
+							}
+							&:first-child:before {
+								content: " ";
+								padding-right: 0;
+							}
+						}
+						span.dietary-icon,
+						span.vegetarian-icon,
+						span.glutenfree-icon,
+						span.not-spicy-icon {
+							font-style: italic;
+						}
+						span.dietary-icon {}
+						span.vegetarian-icon {}
+						span.glutenfree-icon {}
+						span.not-spicy-icon {}
+					}
+					&:last-child {}
 				}
 			}
 		}
-	}
-	.menu-info {
-		p.menu-note {}
+		ol.menu-subsection {
+			padding: 0;
+			li.menu-subsection-wrapper {
+				.menu-subsection-header {
+					h2.menu-subsection-name {}
+					p.menu-subsection-description {}
+				}
+				ol.menu-items {
+					li.menu-item {
+						.inner-item {
+							h3.menu-item-name {}
+							.menu-item-price {
+								p.standard-price {}
+							}
+							p.menu-item-description {}
+							h4.menu-item-nutritional-title {}
+							.menu-item-nutritional-prop {}
+							.menu-section-item-dietary-props {
+								span.dietary-icon {}
+								span.vegetarian-icon {}
+								span.nutfree-icon {}
+								span.dairyfree-icon {}
+								span.not-spicy-icon {}
+							}
+						}
+					}
+				}
+			}
+		}
+		.menu-info {
+			p.menu-note {}
+		}
 	}
 }
 
